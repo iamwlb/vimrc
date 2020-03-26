@@ -1,3 +1,11 @@
+###
+ # @Author: 王丽兵
+ # @Date: 2019-11-29 12:21:07
+ # @LastEditTime: 2020-03-26 16:00:59
+ # @LastEditors: 王丽兵
+ # @Description: 
+ # @FilePath: /blog/Users/iamwlb/Documents/Workspace/ vim/vimrc/publish.sh
+ ###
 #!/bin/bash
 # Program: publish source to git
 # Author 王丽兵
@@ -5,6 +13,7 @@ msg=$1
 if [ -n "$msg" ]; then
     workPath=$(pwd)
     cd $workPath
+    cp ~/.vimrc ./
     echo ' ' | sudo -S git add .
     echo ' ' | sudo -S git commit -m "${msg}"
     echo ' ' | sudo -S git push origin master
